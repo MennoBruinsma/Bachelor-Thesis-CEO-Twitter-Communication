@@ -151,12 +151,9 @@ class Scrape():
         count_measure.reset_index(inplace=True)
         count_measure.columns = ["author_id","retrieved_count"]
         tweets = df_list[0].merge(count_measure, how='left')
-
-        spreadsheet_key = '<insert you own key>'
-        wks_name = 'Tweets'
-
-        #uploading data frame to google sheets, ceo's who did not tweet results in an error and will not be added to the sheet
-        d2g.upload(tweets, spreadsheet_key, wks_name, credentials=self.creds, row_names=True)
+           
+        #save tweets to a csv, to much data for google sheets. I actaully would advise to not use google sheets and juyst csv's for everything    
+        tweets.to_csv('300-.csv', encoding='utf-8', index=False)
     
 if __name__ == "__main__":
     mode1=True  #if True, account information for all CEOs will be scraped and added to a sheet
