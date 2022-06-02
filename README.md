@@ -7,4 +7,10 @@ This repository contains the Python files I used for my thesis on CEO social med
 4. stats.py, I used this to perform paired T-tests. To actaully run this file a lot of extra work in excel is needed. Would not recommend.
 
 I would advise to run the program in the Anaconda environment since a lot of modules did not work when I tried to PIP install them. I worked in a 3.9.12 enviroment.
+I am not allowed to upload the scraped interactions and corresponding files, which would make it easier to understand and replicate the process.
+The code is not optimized or properly documented since this was mostly for own use. I uploaded it because someone might find it interesting.
+
+Greetings,
+
+Menno Bruinsma
 
