@@ -6,5 +6,5 @@ This repository contains the Python files I used for my thesis on CEO social med
 3. visualize.py, does the clustering and outputs figures
 4. stats.py, I used this to perform paired T-tests. To actaully run this file a lot of extra work in excel is needed. Would not recommend.
 
-I would advise to run the program in the Anaconda evironment since a lot of modules did not work when I tried to PIP install them. I worked in a 3.9.12 enviroment.
+I would advise to run the program in the Anaconda environment since a lot of modules did not work when I tried to PIP install them. I worked in a 3.9.12 enviroment.
 
