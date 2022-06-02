@@ -5,6 +5,11 @@ import csv
 from scipy.stats import f
 from scipy.stats import ttest_rel
 
+#each row in these files represents a CEO and the counts for the general topics. This files were made manually in excel.
+#to reproduce these files you need firstly the file which contains tweets and the cluster number. You also need the file which contains cluster numbers and their important words.
+#You need to assign a topic to each cluster number, then join the two files together so each tweet has a topic.
+#then you merge the resulting file with the tweet file that contains which ceo made the tweet.
+#then make a pivot calc and your there.
 df2 = pd.read_csv('./Visualizations2/retweets/retweets_general_topics.csv', delimiter=';')
 df = pd.read_csv('./Visualizations2/tweets/tweets_general_topics.csv',delimiter=';')
 
