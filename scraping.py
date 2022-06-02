@@ -72,6 +72,7 @@ class Scrape():
 
     def ceo_dataframe(self):
         # use creds to create a client to interact with the Google Drive API
+        # here the Twitter handles are pulled from a google sheet, but you could use any method you want.
         client = gspread.authorize(self.creds)
         worksheet = client.open("<insert own sheet name").sheet1
 
@@ -101,12 +102,13 @@ class Scrape():
         api_output.drop_duplicates(["username"], inplace=True)
         input_df = ceo_df.merge(api_output, how="left", left_on="twitter_handle_clean", right_on="username")
         
-        #upload results to google sheet
+        #upload results to google sheet, can also be a csv file or something else
         spreadsheet_key = '<insert own sheet key>'
         wks_name = 'Account_data'
         d2g.upload(input_df, spreadsheet_key, wks_name, credentials=self.creds, row_names=True)
 
     def ceo_id(self):
+        #we open the previously made twitter account sheet from mode 1. Again if you used another method this needs to be changed.
         client = gspread.authorize(self.creds)
         worksheet = client.open("Account_data").sheet1
         rows = worksheet.get_all_values()
@@ -158,5 +160,5 @@ class Scrape():
     
 if __name__ == "__main__":
     mode1=True  #if True, account information for all CEOs will be scraped and added to a sheet
-    mode2=False  #if True, all tweets of the CEOs are scraped
+    mode2=False  #if True, all tweets of the CEOs are scraped. This requires mode 1 to have run once. 
     Scrape(mode1,mode2)
