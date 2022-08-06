@@ -1,6 +1,6 @@
 # Bachelor-Thesis-CEO-Twitter-Communication
 
-This repository contains the Python files I used for my thesis on CEO social media communication. To scrape Twitter I used a academic Twitter account. The calls that are made here cannot be made with a regular Twitter developer account. The order in how to call the files is:
+This repository contains the Python files I used for my thesis on CEO social media communication. To scrape Twitter I used an academic Twitter account. The calls that are made here cannot be made with a regular Twitter developer account. The order in how to call the files is:
 1. scraping.py, if you do not have an academic account the searchtweets module will not work. You will need to change the entire file to make it work.
 2. embeddings.py, makes the precomputed sentence embeddings using sentence transformer.
 3. visualize.py, does the clustering and outputs figures.
